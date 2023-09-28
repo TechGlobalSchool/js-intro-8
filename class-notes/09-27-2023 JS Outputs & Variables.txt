@@ -1,7 +1,7 @@
 
 
 
-09-27-2023 JS Output
+09-27-2023 JS Outputs & Variables
 
 
 RECAP:
