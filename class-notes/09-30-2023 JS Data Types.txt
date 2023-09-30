@@ -1,6 +1,6 @@
 
 
-09-30-2023 JS Data Types & Operators
+09-30-2023 JS Data Types
 
 RECAP:
 Output statement: console.log()
