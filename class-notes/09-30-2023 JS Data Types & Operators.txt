@@ -79,3 +79,9 @@ texts = strings
 
 4398657394876583746 > Number.MAX_SAFE_INTEGER       -> bigint
 typeof 4398657394876583746 == bigint                -> bigint
+
+
+
+When to create a separate variable?
+    -If you use it only once, then do not create a new variable
+    -If you use it multiple times, then create a new variable
