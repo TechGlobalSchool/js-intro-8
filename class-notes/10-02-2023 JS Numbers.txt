@@ -1,0 +1,5 @@
+
+
+10-02-2023 JS Numbers
+
+Numbers in Javascript are whole numbers and decimal numbers.

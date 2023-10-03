@@ -96,3 +96,41 @@ x >= z; // true
 y > x; // true
 x >= y; // false
 (x >= z) < y; // true
+
+
+LOGICAL OPETATORS
+&& 	logical and
+|| 	logical or
+! 	logical not
+
+
+&& - AND OPERATOR 
+expression1 && expression2 
+true && 3 === 3         -> true 
+3 > 5 && 5 < 10         -> false 
+
+
+|| - OR OPERATOR 
+expression1 || expression2 
+true || false   -> true
+
+
+! - NOT OPERATOR 
+true        -> true 
+'a' === 'a' -> true 
+
+!true       -> false 
+!false      -> true 
+
+!(3 === 3 && 2 > 5)      -> true
+
+
+?? - Nullish Coalescing Operator
+expression1 ?? expression2 
+
+The result will always be expression2 if the expression1 is either null or undefined 
+The result will always be expression1 if the expression1 is NOT null or undefined 
+
+null ?? anything        -> anything
+undefined ?? anything   -> anything
+notNullOrUndefined ?? anything -> notNullOrUndefined
