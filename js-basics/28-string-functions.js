@@ -40,6 +40,3 @@ let city = 'Chicago';
 console.log(city.slice(0, 2) + city.slice(-2)); // 'Chgo'
 console.log(city.slice(0, 2) + city.slice(city.length-2)); // 'Chgo'
 console.log(city.substring(0, 2) + city.substring(city.length-2)); // 'Chgo'
-
- 
-
