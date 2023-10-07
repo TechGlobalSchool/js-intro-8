@@ -40,3 +40,25 @@ let city = 'Chicago';
 console.log(city.slice(0, 2) + city.slice(-2)); // 'Chgo'
 console.log(city.slice(0, 2) + city.slice(city.length-2)); // 'Chgo'
 console.log(city.substring(0, 2) + city.substring(city.length-2)); // 'Chgo'
+
+
+// split()
+let str = 'Apple Banana Pineapple Grapes';
+
+const fruits = str.split(' ');
+
+console.log(fruits); // [ 'Apple', 'Banana', 'Pineapple', 'Grapes' ]
+console.log(fruits.length); // 4
+
+
+let text = 'I will do more practices today';
+
+// How many words do you have in this text?
+console.log(text.split(' ')); // [ 'I', 'will', 'do', 'more', 'practices', 'today' ]
+console.log(text.split(' ').length); // 6
+
+console.log(text.split('do')); // [ 'I will ', ' more practices today']
+console.log(text.split(' will do more practices ')); // [ 'I', 'today']
+
+console.log('Hello'.split('')); // [ 'H', 'e', 'l', 'l', 'o' ]
+console.log('Hello World'.split()); // [ 'Hello World' ]

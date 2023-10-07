@@ -95,7 +95,7 @@ index = position of a character or a substring in a string
 -str.slice(startIndex) or str.slice(startIndex, endIndex) -> returns a partial string from the original string off of the given indexes
 -it returns a string. 
 
-17. substring()
+18. substring()
 -str.substring(startIndex) or str.substring(startIndex, endIndex) -> returns a partial string from the original string off of the given indexes
 -it returns a string. 
 
@@ -106,4 +106,16 @@ In this case startIndex is included but endIndex is excluded.
 slice() vs substring()
 -The difference is using these methods with negative indexes.
 -Negative indexes with substring() will always be considered as 0
-NOTE: Similarity: They both return empty string if the startIndex is greater or equal endIndex 
+NOTE: Similarity: They both return empty string if the startIndex is greater or equal endIndex
+
+
+19. split() 
+-split(separator) -> returns an array with the original string elements splitted with separator 
+-returns an array (object).
+
+
+
+00005
+00015
+01000
+53000
