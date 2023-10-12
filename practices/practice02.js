@@ -244,3 +244,179 @@ console.log(s8[s8.length / 2 - 1] + s8[s8.length / 2]); // Sc
 console.log(s6.slice(s6.length / 2 - 1, s6.length / 2 + 1));
 console.log(s7.slice(s7.length / 2 - 1, s7.length / 2 + 1));
 console.log(s8.slice(s8.length / 2 - 1, s8.length / 2 + 1));
+
+/*
+Question 5
+Requirement:
+Write a program that divides the given String. Assume the length of the String will at least 
+be 4.
+-Find and print the first two characters
+-Find and print the last two characters 
+-Find and print all the middle characters other than first and last 2 characters
+
+
+Test Data 1:
+let s4 = "abcd";
+
+Expected Result 1:
+The first 2 characters are = ab
+The last 2 characters are = cd
+The other characters are = 
+
+
+Test Data 2:
+let s4 = "JavaScript";
+
+Expected Result 2:
+The first 2 characters are = Ja
+The last 2 characters are = pt
+The other characters  are = vaScri
+*/
+
+let str1 = "abcd"; // ab, "", cd
+let str2 = "JavaScript"; // Ja, vaScri, pt
+
+// Solution 5
+// Get the first 2 chars
+const firstTwoChars = str1.slice(0, 2);
+// Get the last 2 chars
+// const lastTwoChar = str1.slice(str1.length - 2, str1.length);
+const lastTwoChars = str1.slice(-2);
+// Get the middle chars
+const middleChars = str1.slice(2, str1.length - 2);
+
+console.log("First two chars: ", firstTwoChars);
+console.log("Last two chars: ", lastTwoChars);
+console.log("Middle chars: ", middleChars);
+
+// Test for str2
+console.log("First two chars: ", str2.slice(0, 2));
+console.log("Last two chars: ", str2.slice(-2));
+console.log("Middle chars: ", str2.slice(2, str2.length - 2));
+
+// subString() solution
+console.log("First two chars: ", str2.substring(0, 2)); // Ja
+console.log("Last two chars: ", str2.substring(str2.length - 2, str2.length)); // pt
+console.log("Middle chars: ", str2.substring(2, str2.length - 2)); // vaScri
+
+/*
+Question 6
+
+Requirement:
+Write a program that checks if a given String starts and ends with xx. 
+-If given String starts and ends with xx, then print true. 
+-Otherwise, print false
+
+Test Data 1:
+let s7 = "";
+
+Expected Result 1:
+false
+
+
+Test Data 2:
+let s7 = "red";
+
+Expected Result 2:
+false
+
+
+
+Test Data 3:
+let s7 = "green";
+
+Expected Result 3:
+false
+
+
+
+Test Data 4:
+let s7 = "xxbluexx";
+
+Expected Result 4:
+true
+*/
+
+// Solution 6
+
+let str3 = "";
+let str4 = "red";
+let str5 = "green";
+let str6 = "xxbluexx";
+
+function checkIfXX(str) {
+  // check if str starts and ends with "xx"
+  console.log(str.startsWith("xx") && str.endsWith("xx"));
+  console.log(
+    str.slice(0, 2) === "xx" && str.slice(str.length - 2, str.length) === "xx"
+  );
+  console.log(
+    str.slice(0, 2).includes("xx") &&
+      str.slice(str.length - 2, str.length).includes("xx")
+  );
+  // return str.startsWith("xx") && str.endsWith("xx");
+}
+
+checkIfXX(str3);
+checkIfXX(str4);
+checkIfXX(str5);
+checkIfXX(str6);
+
+/*
+Requirement:
+Write a program that swaps the first and last word of a given sentence as a String. 
+
+Test Data 1:
+let s8 = "";
+
+Expected Result 1:
+""
+
+
+Test Data 2:
+let s8 = " ";
+
+Expected Result 2:
+" "
+
+
+Test Data 3:
+let s8 = "I like Apple";
+
+Expected Result 3:
+"Apple like I"
+
+
+
+Test Data 4:
+let s8 = "JavaScript is nice to learn";
+
+Expected Result 4:
+"learn is nice to JavaScript"
+
+*/
+
+let swap1 = ""; // ""
+let swap2 = " "; // " "
+let swap3 = "I like Apple"; // "Apple like I"
+let swap4 = "JavaScript is nice to learn"; // learn is nice to JavaScript
+
+function swapWords(sent) {
+  const first = sent.slice(0, sent.indexOf(" "));
+  const last = sent.slice(sent.lastIndexOf(" ") + 1);
+  const middle = sent.slice(sent.indexOf(" "), sent.lastIndexOf(" ") + 1);
+  console.log(last + middle + first);
+
+  //  Note: Not tested on whitespace or emtpy string but seems correct
+  const fIdx = sent.indexOf(" ");
+  const lIdx = sent.lastIndexOf(" ");
+  console.log(
+    "Using indexes: ",
+    sent.slice(lIdx + 1) + sent.slice(fIdx, lIdx + 1) + sent.slice(0, fIdx)
+  );
+}
+
+swapWords(swap1);
+swapWords(swap2);
+swapWords(swap3);
+swapWords(swap4);
