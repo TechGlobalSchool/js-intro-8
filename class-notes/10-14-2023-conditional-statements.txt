@@ -37,3 +37,91 @@ else {
 if there is class, I will join the class 
 else I will go for a walk
 
+
+if(condition) { // true
+    // if block
+}
+else { // false
+    // else block
+}
+
+When to use if-else statements? -> if you have only 2 options could possibly be your result
+PASS or FAIL 
+RETIRED or NOT 
+EVEN or ODD 
+
+
+
+if-else if – else ladder statement
+-If you have more than 2 options could possibly be your result, then you will use if-else if -else ladder statements
+
+A random number could be negative, positive or neutral
+0 is neutral
+
+let number = 0;
+
+if(number > 0) {
+    // positive
+}
+else if(number < 0) {
+    // negative
+}
+else { // all the conditions above are false
+    // neutral
+}
+
+In the above statements, else will be executed if the first 2 conditions are false.
+
+-Infinit
+ -> 49.999999999999999 percent for negative
+
+0  -> 0.000000000000000000000000000001 percent
+
+-> 49.999999999999999 percent for positive
+
+
+Infinity
+
+
+
+NESTED if-else statements
+if(condition) {
+    if(inner-condition) {
+
+    }
+    else {
+
+    }
+}
+else {
+    if(inner-condition) {
+
+    }
+    else {
+
+    }
+}
+
+
+They go to work on weekdays every morning
+They go to school on weekdays every evening
+
+They go to school on weekends every morning
+They have some leisure on weeknds every evening
+
+if(weekday) {
+    if(morning) {
+        // work
+    }
+    else {
+        // school
+    }
+}
+else {
+    if(morning) {
+        // school
+    }
+    else {
+        // leisure
+    }
+}
