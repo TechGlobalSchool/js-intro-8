@@ -1,0 +1,21 @@
+
+
+
+10-14-2023 Conditional Statements
+
+{} => block
+
+const isClass;
+
+
+if(isClass) {
+    // Execute this block of code
+}
+else {
+    // Execute this block of code
+}
+
+
+if there is class, I will join the class 
+else I will go for a walk
+
