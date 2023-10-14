@@ -3,6 +3,24 @@
 
 10-14-2023 Conditional Statements
 
+-if statement is used to test the condition. 
+-It controls the flow of the program based on the condition and executes the statement if condition is truthy (true).
+-if statement always takes a condition.
+-true, or truthy or any expression that evaluates to true will be considered as true
+
+Syntax:
+
+if(condition) {
+    // code block
+}
+
+
+Falsy values: false, null, undefined, NaN, 0, empty string
+Truthy values: true, not falsy values
+
+NOTE: If statement can be used without the else statement 
+BUT, else cannot be used without if
+
 {} => block
 
 const isClass;
