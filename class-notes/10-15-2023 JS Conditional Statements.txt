@@ -156,3 +156,16 @@ Different ways to check if a name starts with j ignoring cases
 4.      name.startsWith('J') || name.startsWith('j')
 5.      name.toUpperCase().startsWith('J')
 6.      name.toLowerCase().startsWith('j')
+
+
+
+Using if-else statements within a function
+Write function that takes a name and check if it starts with 'E' or 'e' and returns a boolean
+Function name is startE.
+NOTE: If the given name is empty -> then return false
+
+startE('Emily') -> true
+startE('emily') -> true 
+startE('Alex') -> false 
+startE('') -> false
+
