@@ -110,3 +110,7 @@ if(num === 1) {
 else {
     console.log('The number is ZERO');
 }
+
+// We can use below as well 
+if(num === 1) console.log('The number is ONE');
+else console.log('The number is ZERO');
