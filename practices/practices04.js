@@ -381,3 +381,230 @@ if (
 } else {
   console.log(`"${var6}" is not a special character`);
 }
+
+/*
+
+Question 7
+
+Requirement:
+Assume you are given a single character.
+Find if the given character is a vowel or not.
+
+NOTE: if the character is not a letter, print "INVALID INPUT"
+NOTE: Vowel letters: a, e, i o, u, A, E, I, O, U 
+
+Test data 1:
+"a"
+
+Expected result 1:
+"a"  is a vowel
+
+Test data 2:
+"5"
+
+Expected result 2:
+"INVALID INPUT"
+
+
+Test data 2:
+"N"
+
+Expected result 1:
+"N"  is not a vowel
+
+Test data 4:
+" "
+
+Expected result 4:
+"INVALID INPUT"
+*/
+
+const letter = "N";
+if (
+  letter.toLowerCase().charCodeAt() === 97 ||
+  letter.toLowerCase().charCodeAt() === 101 ||
+  letter.toLowerCase().charCodeAt() === 105 ||
+  letter.toLowerCase().charCodeAt() === 111 ||
+  letter.toLowerCase().charCodeAt() === 117
+) {
+  console.log(`${letter} is a vowel`);
+} else if (
+  letter.toLowerCase().charCodeAt() >= 98 &&
+  letter.toLowerCase().charCodeAt() <= 122
+) {
+  console.log(`${letter} is not a vowel`);
+} else {
+  console.log("INVALID INPUT");
+}
+// ----
+let data = "5";
+// Also !isNaN(parseFloat(num)) || !" "
+if (!Number(data) || !" ") {
+  if ("aeiouAEIOU".includes(data)) {
+    console.log(`${data} is a vowel`);
+  } else console.log(`${data} is not a vowel`);
+} else {
+  console.log("INVALID INPUT");
+}
+
+/*
+Question 8
+
+Requirement:
+Assume you are given a single character.
+Find if the given character is a letter, digit, whitespace or special.
+
+Test data 1:
+"a"
+
+Expected result 1:
+"a"  is a letter
+
+
+Test data 2:
+"5"
+
+Expected result 2:
+"5"  is a digit
+
+
+Test data 3:
+"$"
+
+Expected result 3:
+"$"  is a special character
+
+
+Test data 4:
+" "
+
+Expected result 4:
+" " is a whitespace
+*/
+
+let s6 = "$";
+if (
+  (s6.charCodeAt() >= 33 && s6.charCodeAt() <= 47) ||
+  (s6.charCodeAt() >= 58 && s6.charCodeAt() <= 64) ||
+  (s6.charCodeAt() >= 91 && s6.charCodeAt() <= 96) ||
+  (s6.charCodeAt() >= 123 && s6.charCodeAt() <= 126)
+)
+  console.log(`${s6} it is a special character`);
+else if (Number(s6)) console.log(`${s6} it is a digit`);
+else if (s6 === " ") console.log(`${s6} it is a whitespace`);
+else console.log(`${s6} it is a letter`);
+
+// ---
+const character = " ";
+if (
+  character.toUpperCase().charCodeAt() >= 65 &&
+  character.toUpperCase().charCodeAt() <= 90
+) {
+  console.log(`${character} is a letter`);
+} else if (character.charCodeAt() >= 48 && character.charCodeAt() <= 57) {
+  console.log(`${character} is a digit`);
+} else if (character === " ") {
+  console.log(`${character} is a whitespace`);
+} else {
+  console.log(`${character} is a special character`);
+}
+
+/*
+Question 9
+
+Requirements:
+
+Write a function that finds the largest of five numbers.
+
+Note: Using simple if-elseif-else conditions
+
+Test data 1:
+-5, -2, -6, 0, -1
+
+Expected result 1:
+0
+
+
+Test data 2:
+10, 102, 0, -8, -100
+
+Expected result 2:
+102
+*/
+function findMax(n1, n2, n3, n4, n5) {
+  let result = Math.max(n1, n2, n3, n4, n5);
+  console.log(result);
+}
+findMax(1, 102, 0, -8, -100);
+
+// if else solution
+function findMax(n1, n2, n3, n4, n5) {
+  if (n1 > n2 && n1 > n3 && n1 > n4 && n1 > n5) console.log(n1);
+  else if (n2 > n1 && n2 > n3 && n2 > n4 && n2 > n5) console.log(n2);
+  else if (n3 > n1 && n3 > n2 && n3 > n4 && n3 > n5) console.log(n3);
+  else if (n4 > n1 && n4 > n2 && n4 > n3 && n4 > n5) console.log(n4);
+  else if (n5 > n1 && n5 > n2 && n5 > n3 && n5 > n4) console.log(n4);
+  else console.log("Invalid");
+}
+
+findMax(1, 102, 0, -8, -100);
+/*
+Question 10
+
+Requirements:
+
+Write a function to check from two given integers whether one of them is 8 or their sum or difference is 8.
+
+Note: Using simple if-elseif-else conditions
+
+Test data 1:
+7, 8
+
+Expected result 1: 
+true
+
+Test data 2:
+16, 8
+
+Expected result 2: 
+true
+
+
+Test data 3:
+24, 32
+
+Expected result 3: 
+true
+
+Test data 4:
+17, 18
+
+Expected result 4: 
+False
+*/
+
+function check8(x, y) {
+  if (x == 8 || y == 8) {
+    return true;
+  }
+
+  if (x + y == 8 || Math.abs(x - y) == 8) {
+    return true;
+  }
+
+  return false;
+}
+
+console.log(check8(7, 8));
+console.log(check8(16, 8));
+console.log(check8(24, 32));
+console.log(check8(17, 18));
+
+// ----
+function isEqualTo8(n1, n2) {
+  if (n1 === 8 || n2 === 8 || n1 + n2 === 8 || Math.abs(n1 - n2) === 8) {
+    return true;
+  } else {
+    return false;
+  }
+}
