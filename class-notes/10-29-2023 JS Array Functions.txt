@@ -65,3 +65,21 @@ shift -> remove - makes array shorter
 -it takes one element as an argument
 -it returns an index as a number (0 or positive if the element exist, -1 otherwise)
 -it does not change anything in the original array
+
+
+8. concat() method
+-concatenates/combines two or more arrays together and creates a new array
+-it takes an array as an argument
+-it returns a new array
+-it does not change anything in the original array
+
+Spread Operator: The Spread (...) operator expands an iterable (like an array) into its individual 
+elements.
+NOTE: This could be useful when concatenating and pushing multiple elements into some other arrays.
+
+
+9. reverse() method
+-reverses the original array 
+-it does not take any argument
+-it returns the modified original array 
+-it changes the original array

@@ -12,3 +12,13 @@ str.lastIndexOf('first'); // 9
 str.includes('abc'); // false
 str.indexOf('abc'); // -1
 str.lastIndexOf('abc'); // -1 
+
+
+
+let s1 = 'Tech', s2 = 'Global';
+
+console.log(s1 + s2);
+console.log(s1.concat(s2));
+console.log(`${s1}${s2}`);
+
+console.log(s1.split(''));
