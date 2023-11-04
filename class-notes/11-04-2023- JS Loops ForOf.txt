@@ -50,4 +50,14 @@ WHEN TO USE for loop over for...of loop with arrays?
 
 
 
+SUM or PRODUCT
+5 + 0       -> 5
+10 + 0      -> 10
+-2 + 0      -> -2
 
+5 * 1       -> 5
+10 * 1      -> 10
+-2 * 1      -> -2
+
+NOTE: Zero is not affecting result when you find sum while one is not affecting any result when you multiply
+numbers.

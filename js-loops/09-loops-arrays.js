@@ -28,3 +28,31 @@ for(let i = 0; i <= numbers.length-1; i++) {
 }
 
 console.log(sumOfEvenIndex);
+
+
+
+const nums = [3, 4, 7, 3, 2]; 
+
+// Find the multiplication of all numbers         -> 504
+// Find the multiplication of numbers that has odd index -> 4*3 -> 12
+
+console.log('\n-----------Multiplication of Numbers-------------\n');
+
+let product = 1;
+
+for(const num of nums) {
+    product *= num; 
+}
+
+console.log('Product: ', product);
+
+
+console.log('\n-----------Multiplication of Odd Indexes-------------\n');
+
+let productOfOddIndex = 1;
+
+for(let i = 0; i < nums.length; i++) {
+    if(i % 2 !== 0) productOfOddIndex *= nums[i];
+}
+
+console.log(productOfOddIndex);
