@@ -42,8 +42,47 @@ console.log(arr3);
 
 
 
+NESTED LOOPS 
+-Any loop statement can be used in another loop.
+-Executing a loop inside another loop is known as nested loops.
+-The first loop is known as outer loop, and the second one which is used inside the first one is known as inner loop.
+NOTE: we will cover for in loop once we learn JS Objects as it is used with objects.
 
 
 
+for(let i = 1; i <= 3; i++) {
+    console.log(i);
+}
+
+for(let i = 1; i <= 5; i++) {
+    console.log(i);
+}
 
 
+for(let i = 1; i <= 3; i++) {
+    console.log(i);
+
+    for(let j = 1; j <= 5; j++) {
+        console.log(j);
+    }
+}
+
+Array forEach() higher order function: This is another way we can iterate through array elements 
+
+Function expression?
+higher order function?
+callback function?
+arrow function?
+
+
+JS OBJECTS 
+-It is a reference data type.
+-It is consist of one or multiple key-value pairs.
+-Each key-value pair is known as properties.
+-We can create objects using object literals {} or the object constructor 
+    const obj1 = {};
+    const obj2 = new Object();
+
+
+5. for...in loop  
+-Used to loop Js Objects with their properties

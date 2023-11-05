@@ -52,4 +52,3 @@ for(const num of numbers) {
 }
 
 console.log(firstDivisible7);
-
