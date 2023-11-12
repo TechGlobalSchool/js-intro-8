@@ -25,3 +25,10 @@ printHello(); // Hello
 const printHello = () => console.log('Hello');
 
 printHello(); // Hello
+
+
+CALLBACK FUNCTION 
+-It is a function used as an argument of another function.
+
+
+*** What are the differences bt map() vs filter() vs reduce() methods?
