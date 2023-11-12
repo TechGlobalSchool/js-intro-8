@@ -31,3 +31,28 @@ const appleStore = [
 // Find the product with the biggest quantity   -> AirPods Pro
 // Find the product with the smallest quantity  -> MacBook Pro 16-inch
 // Find all the product names   -> [ 'iPhone 14 Pro', 'MacBook Pro 16-inch', 'iPad Air', 'Apple Watch Series 7', 'AirPods Pro' ]
+
+if (appleStore.length > 0) {
+
+    let most_expensive_product = appleStore[0];
+    let most_affordable_product = appleStore[0];
+    let product_with_biggest_quantity = appleStore[0];
+    let product_with_lowest_quantity = appleStore[0];
+    const product_names = [];
+
+
+    for (const product of appleStore) {
+        product_names.push(product.productName);
+        if (product.price > most_expensive_product.price) most_expensive_product = product;
+        if (product.price < most_affordable_product.price) most_affordable_product = product;
+        if (product.quantity > product_with_biggest_quantity.quantity) product_with_biggest_quantity = product;
+        if (product.quantity < product_with_lowest_quantity.quantity) product_with_lowest_quantity = product;
+    }
+
+    console.log(most_expensive_product.productName);
+    console.log(most_affordable_product.productName);
+    console.log(product_with_biggest_quantity.productName);
+    console.log(product_with_lowest_quantity.productName);
+    console.log(product_names);
+}
+else console.error('There is no product in the AppleStore!!!');
