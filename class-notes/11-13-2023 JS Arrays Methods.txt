@@ -43,22 +43,3 @@ forEach(callbackfunction);
 map(callbackfunction);
 filter(callbackfunction);
 reduce(callbackfunction);
-
-
-
-
-
-
-
-7
-
-let isPrime = true;
-
-for(let i = 2; i < number; i++) { // 2, 3, 4, 5, 6
-    if(number % i === 0) {
-        isPrime = false;
-        break;
-    }
-}
-
-return isPrime;
