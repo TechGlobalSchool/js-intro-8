@@ -23,3 +23,16 @@ const fruits = ['Apple', 'Orange', 'Kiwi', 'Pineapple', 'Mango', 'Melon'];
 
 
 // TODO we will solve this on Saturday morning ;)
+
+let countApple = 0;
+
+for(const fruit of fruits) {
+    if(fruit.toLowerCase().includes('apple')) countApple++;
+}
+
+console.log(countApple); // 2
+console.log(fruits.filter(fruit => fruit.toLowerCase().includes('apple')).length); // 2
+console.log(fruits.reduce((countApple, curr) => curr.toLowerCase().includes('apple') ? countApple + 1 : countApple, 0)); // 2
+
+console.log(fruits.reduce((countI, curr) => curr.toLowerCase().indexOf('i') >= 0 ? countI + 1 : countI, 0)); // 2
+console.log(fruits.reduce((countE, curr) => curr.toLowerCase().endsWith('e') ? countE + 1 : countE, 0)); // 3
