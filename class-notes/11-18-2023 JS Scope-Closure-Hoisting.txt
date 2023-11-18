@@ -45,7 +45,11 @@ function funcName() {
 }
 
 
-// Lexical Scope - 
+// Lexical Scope - nested functions
+-In case you have nested functions;
+    The inner function can access the outer function variables 
+    However, the outer function cannot access the inner function variables 
+-Same rule applies to all var, let and const variables.
 
 
 Hoisting: is a concept that JS moves variable declarations to the top of the file and allows you to access the 
@@ -60,3 +64,5 @@ However, function expressions and arrow functions are not hoisted and can only b
 
 *** Interview Questions
 What is hoisting?
+What is scope? Tell me about different scopes.
+What is closure and why is it used?
