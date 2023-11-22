@@ -122,13 +122,6 @@ function Teacher(fName, lName, age, field) {
 }
 
 // Create 3 teacher objects with the proper information - Log all the objects
-function Teacher(fName, lName, age, field) {
-    this.fName = fName;
-    this.lName = lName;
-    this.age = age;
-    this.field = field;
-}
-
 const teacher1 = new Teacher('David', 'Doe', 98, 'Scuba Instructor');
 const teacher2 = new Teacher('Arnold', 'schwarzenegger', 76, 'Gym');
 const teacher3 = new Teacher('Bowser', 'Junior', 13, 'Art');
@@ -141,6 +134,13 @@ console.log(teacher3);
 // teach() -> {fName} teaches. 
 // giveHomework() {fName} gives homework.
 
+Teacher.prototype.teach = function() {
+    console.log(`${this.fName} teaches.`);
+}
+
+Teacher.prototype.giveHomework = function() {
+    console.log(`${this.fName} gives homework.`);
+}
 
 // Oldest teacher -> David
 // Youngest student -> Morgan
@@ -148,3 +148,15 @@ console.log(teacher3);
 // Count the students with the first name having letter a ignoring cases -> 4
 const teachers = [teacher1, teacher2, teacher3];
 const students = [student1, student2, student3, student4, student5];
+
+const oldestTeacher = teachers.reduce((oldest, curr) => oldest.age > curr.age ? oldest : curr, {});
+console.log(oldestTeacher.fName); // David
+
+const youngestStudent = students.reduce((young, curr) => young.age < curr.age ? young : curr, {});
+console.log(youngestStudent.fName); // Morgan
+
+console.log(students.filter(student => student.lName === 'Smith').length); // 3
+console.log(students.reduce((counter, curr) => curr.lName === 'Smith' ? counter + 1 : counter, 0)); // 3
+
+console.log(students.filter(student => student.fName.toLowerCase().includes('a')).length); // 4
+console.log(students.reduce((counter, curr) => curr.fName.toLowerCase().includes('a') ? counter + 1 : counter, 0)); // 4
