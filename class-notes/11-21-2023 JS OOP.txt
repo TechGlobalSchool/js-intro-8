@@ -98,3 +98,39 @@ function sum(x, y) {
 
 
 sum(3, 5);
+
+function Car()(year, make, model, color, price){
+    this.year = year; 
+    this.make = make;
+    this.model = model;
+    this.color = color;
+    this.price = price;
+}
+
+Car.prototype.drive = function() {
+    // block
+}
+
+
+class Car {
+    constructor(year, make, model, color, price){
+        this.year = year; 
+        this.make = make;
+        this.model = model;
+        this.color = color;
+        this.price = price;
+    }
+    drive() {
+        // body
+    }
+}
+
+// Creating objects from the Car class using its constructor
+const car1 = new Car(2023, 'Tesla', 'X', 'White', 80000);
+const car2 = new Car(2023, 'BMW', 'X8', 'Black', 100000);
+
+car1.drive();
+car2.drive();
+
+car1.year; // 2023
+car2.color; // Black
