@@ -33,7 +33,7 @@ function testAge() {
         setTimeout(() => {
             const age = Math.floor(Math.random() * 30);
             console.log(`Age is = ${age}.`);
-            if(age >= 16) {
+            if (age >= 16) {
                 resolve();
             }
             else reject();
@@ -46,4 +46,28 @@ testAge().then(() => {
     console.log('YOU CAN GET DL WITH AN EXAM!');
 }).catch(() => {
     console.log('ERROR: YOU CANNOT GET DL!');
+});
+
+
+
+// A login promise username = TechGlobal and password = Test1234
+function login(username, password) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if (username === 'TechGlobal') {
+                // Check password
+                if (password === 'Test1234') resolve();
+                else reject('invalid-password');
+            }
+            else reject('invalid-username');
+        }, 3000);
+    });
+}
+
+
+login('TechGlobal', 'Test1234').then(() => {
+    console.log('You are logged in');
+}).catch((err) => {
+    if (err === 'invalid-username') console.log('Invalid Username entered!');
+    else console.log('Invalid Password entered!');
 });
