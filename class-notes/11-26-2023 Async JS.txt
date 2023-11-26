@@ -9,3 +9,10 @@ JavaScript is Asynchronous and it provides 3 different ways to handle Asynchrono
 1. callbacks (BEFORE ES6)
 2. promises 
 3. async-await 
+
+
+
+            Promise 
+
+            pending
+       success   rejected
