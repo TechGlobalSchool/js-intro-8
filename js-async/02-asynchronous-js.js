@@ -3,7 +3,9 @@ function print1() {
 }
 
 function print2() {
-    console.log('2');
+    setTimeout(() => {
+        console.log('2');
+    }, 5000);
 }
 
 function print3() {
@@ -11,32 +13,18 @@ function print3() {
 }
 
 // JS is single-threaded and will invoke below functions one by one
-// print1(); 
-// print2();
-// print3();
-
-/*
-1
-2
-3
-*/
-
-print1();
-
-setTimeout(() => {
-    print2();
-}, 10000);
-
+print1(); 
+print2();
 print3();
 
 /*
+The order when there is no delay with the events
+1
+2
+3
+
+The order when there is delay with the event 2
 1
 3
 2
 */
-
-// What if you would like wait for 2? You need to snychronize your code
-
-// enter credentials
-// click on login - 20 seconds
-// change your profile picture

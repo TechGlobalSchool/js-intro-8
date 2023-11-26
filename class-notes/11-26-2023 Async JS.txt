@@ -1,0 +1,11 @@
+
+
+
+11-26-2023 Asynchronous JavaScript 
+
+
+JavaScript is Asynchronous and it provides 3 different ways to handle Asynchronous code.
+
+1. callbacks (BEFORE ES6)
+2. promises 
+3. async-await 
