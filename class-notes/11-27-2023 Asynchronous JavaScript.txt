@@ -5,14 +5,104 @@
 
 AJAX: 
 
+setTimeOut() function is used for hard pause for the code. So, we will stay away from it. Instead, we will 
+learn implicit wait which is used to wait until a condition happens or up to certain amount of time. 
+
+
 Ways to handle asynchronous JavaScript code 
 1. Callbacks 
 2. Promises 
 3. Async Await 
 
+async keyword is used to define an asynchronous function
+await keyword ise used to wait for an event till it completes, then it cotinues with the next event 
+await keyword can ONLY BE USED with the functions that return a PROMISE. 
 
 
+BEFORE ES6                      AFTER ES6
+Callbacks             Promises            Async-Await
+DO NOT USE            -70%                -30%    
 
 
+80 minutes party
+-go to costco -> 20 minutes
+-get meats and veggies -> 15 minutes
+-cook -> 30 minutes
+-serve -> 10 minutes 
+-eat -> 5 minutes 
 
+1. Eat 
+2. Serve 
+3. Get meat and veggies
+4. Go to costco
+5. Cook
+
+
+function goToCostco() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if(carDoesNotBreak) resolve();
+            else reject();
+        }, 20000);
+    });
+}
+
+function getMeat() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if(meatAvailable) resolve();
+            else reject();
+        }, 15000);
+    });
+}
+
+function cook() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if(gasAvailable) resolve();
+            else reject();
+        }, 30000);
+    });
+}
+
+function serve() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if(noIssues) resolve();
+            else reject();
+        }, 10000);
+    });
+}
+
+function eat() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if(noProblem) resolve();
+            else reject();
+        }, 5000);
+    });
+}
+
+//
+async function test() {
+    try {
+        await goToCostco();
+        await getMeat();
+        await cook();
+        await serve();
+        await eat();
+    } catch(err) {
+        console.log(err);
+    }
+}
+
+test();
+
+
+// Write a similar code for you daily routine or morning routine
+
+
+ERROR HANDLING 
+
+try-catch-finally blocks 
 
