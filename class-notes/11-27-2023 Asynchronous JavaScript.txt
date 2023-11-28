@@ -103,6 +103,28 @@ test();
 
 
 ERROR HANDLING 
+Error: Unexpected result from a running program.
+
+There are 2 types of errors 
+1. Syntax error: this type of errors happen because of programmer like spelling errors. 
+2. Runtime error: this type of errors may happen due to a logical mistake by programmer or a system issue.
+
 
 try-catch-finally blocks 
+-We will use try for a block of code that could possibly throw an error.
+-catch block is used to catch if any error happens in the try block and customize the error.
+-catch block will be executed ONLY IF there is an error. 
+-try block cannot be used alone. It requires either catch or finally or both. 
+-catch or finally blocks cannot be used without try block. 
+-finally block is always executed in case of error or not.
+
+
+throw keyword 
+-this keyword is used to throw a custom error intentionally
+
+function giveMeAPositiveNumber(number) {
+    if(number > 0) console.log('Thanks!', number);
+    else throw new Error('Bad guy!!! Give positive number!', 0);
+}
+
 
