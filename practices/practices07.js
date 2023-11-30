@@ -188,6 +188,7 @@ class ShoppingCart {
     };
   }
 
+  // Add
   addToCart(product) {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
@@ -197,6 +198,21 @@ class ShoppingCart {
         } else {
           reject("No product provided. Please add at least one");
         }
+      }, 1000);
+    });
+  }
+  // Update qty (lets simplify it even more)
+  updateQuantity(pName, newQty) {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        const productToUpdate = this.cart.find((p) => p.name === pName);
+        if (itemToUpdate) {
+          productToUpdate.quantity = newQty;
+          console.log(`${pName} quantity updated to ${newQty}.`);
+        } else {
+          console.log(`${pName} not found in the cart.`);
+        }
+        resolve();
       }, 1000);
     });
   }
