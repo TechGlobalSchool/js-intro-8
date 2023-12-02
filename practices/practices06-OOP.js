@@ -96,3 +96,43 @@ console.log(`${oldest.fname} ${oldest.lname} is oldest with the age of ${oldest.
 
 const oldestWithReduce = students.reduce((oldest, student) => oldest.age > student.age ? oldest : student , students[0]);
 console.log(`${oldestWithReduce.fname} ${oldestWithReduce.lname} is oldest with the age of ${oldestWithReduce.age}.`);
+
+
+let youngest = students[0];
+
+for(const student of students) {
+    if(student.age < youngest.age) youngest = student;
+}
+
+console.log(`${youngest.fname} ${youngest.lname} is youngest with the age of ${youngest.age}.`);
+
+const youngestWithReduce = students.reduce((result, student) => {
+    if(result.age < student.age) return result;
+    else return student;
+}, students[0]);
+
+/*
+result = {}         student = 23
+result = student with the age 23 student = 19
+*/
+
+console.log(`${youngestWithReduce.fname} ${youngestWithReduce.lname} is youngest with the age of ${youngestWithReduce.age}.`);
+
+const sumAge = students.reduce((sum, student) => sum + student.age, 0);
+
+console.log(sumAge / students.length); // 22.75
+
+const mathStudents = students.filter(x => x.className === 'Math').map(x => x.fname + ' ' + x.lname);
+console.log(mathStudents); // [ 'John Doe', 'Alex Smith', 'Jane Doe' ]
+
+console.log(students.filter(x => x.gender === 'M').map(x => x.fname)); // [ 'John', 'Alex', 'James' ]
+console.log(students.filter(x => x.age > 20).map(x => x.lname)); // [ 'Doe', 'Smith', 'Morgan' ]
+
+const maleStudentsFName = students.reduce((result, student) => {
+    if(student.gender === 'M') {
+        result.push(student.fname);
+    }
+    return result;
+}, []);
+
+console.log(maleStudentsFName); // [ 'John', 'Alex', 'James' ]
