@@ -81,7 +81,7 @@ module.exports.loginInfo = loginInfo;
 
 
 WAY 2 - Improved
-module.exports.loginInfo = {
+module.exports = {
     username,
     password,
     appURL,
@@ -104,3 +104,34 @@ console.log(loginInfo.username);
 console.log(loginInfo.password);
 console.log(loginInfo.appURL);
 loginInfo.login();
+
+
+ES6 Modules 
+-It is added a little bit of syntatic sugar on previous CommonJS Modules 
+-CommonJS is supported with older versions mostly with Node 
+-ES6 is supported by new versions of Node and all the modern browsers. 
+
+    export is used to export reusable components from a file 
+    import...from is used to import reusable components. 
+
+fileDriver.js 
+// properties 
+const driverName = 'chrome';
+
+// functions 
+function quitDriver () {
+    //quitting driver
+}
+
+function getDriver() {
+    // getting driver
+}
+
+
+You can export a class as well. 
+
+
+What is default export? 
+-default export is a feature used in ES6 Modules and allows programmer to make one compoenent as default.
+-This component can easily be accessed in other files. 
+NOTE: There can be ONLY ONE default export in a file.
