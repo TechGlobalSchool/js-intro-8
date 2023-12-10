@@ -62,3 +62,25 @@ Ex: `alert('Message'), prompt('question')`
 - It can be used to view or change the HTML of a node.
 - You can also use `innerText` or `textContent` similarly
 - We can also add html content using innerHTML.Ex: `articleEl.innerHTML = "<h2>Article Heading</h1>"`
+
+## TRAVERSING DOM
+
+DOM tree contains all kinds of nodes: element, whitespaces and comments etc.
+
+#### childNodes
+
+- Returns NodeList of all nodes
+
+#### children
+
+- Returns HTMLCollection of only elements (no whitespace, comment ...)
+
+#### Other useful node methods
+
+- firstChild, lastChild
+- previousSibling, nextSibling
+
+#### Other useful element methods
+
+- firstElementChild, lastElementChild
+- previousElementSibling, lastElementSibling
