@@ -84,3 +84,15 @@ DOM tree contains all kinds of nodes: element, whitespaces and comments etc.
 
 - firstElementChild, lastElementChild
 - previousElementSibling, lastElementSibling
+
+## Create element in the DOM
+
+- `createElement`
+- To add a content to a newly created element use either `innerHTML` or `document.createTextNode()` with `append()`
+
+## appendChild vs append
+
+- Element.append() allows you to also append string objects, whereas Node.appendChild() only accepts Node objects.
+- Element.append() has no return value, whereas Node.appendChild() returns the appended Node object.
+- Element.append() can append several nodes and strings, whereas Node.appendChild() can only append one node.
+- Reference: https://developer.mozilla.org/en-US/docs/Web/API/Element/append
